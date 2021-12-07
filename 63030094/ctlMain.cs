@@ -1,28 +1,23 @@
-using System;
+﻿using System;
 using System.Collections;
 using System.ComponentModel;
 using System.Drawing;
 using System.Data;
 using System.Windows.Forms;
-using PluginInterface;
 
-namespace Plugin4
+namespace PluginSupawadee
 {
 	/// <summary>
 	/// Summary description for ctlMain.
 	/// </summary>
-	public class Plugin4 : System.Windows.Forms.UserControl, IPlugin
+	public class ctlMain : System.Windows.Forms.UserControl
 	{
-		private System.Windows.Forms.Button butSend;
-		private System.Windows.Forms.Label label1;
-		private System.Windows.Forms.GroupBox groupBox1;
-		private System.Windows.Forms.TextBox txtFeedback;
 		/// <summary> 
 		/// Required designer variable.
 		/// </summary>
 		private System.ComponentModel.Container components = null;
 
-		public Plugin4()
+		public ctlMain()
 		{
 			// This call is required by the Windows.Forms Form Designer.
 			InitializeComponent();
@@ -53,162 +48,107 @@ namespace Plugin4
 		/// </summary>
 		private void InitializeComponent()
 		{
-			this.butSend = new System.Windows.Forms.Button();
-			this.label1 = new System.Windows.Forms.Label();
-			this.groupBox1 = new System.Windows.Forms.GroupBox();
-			this.txtFeedback = new System.Windows.Forms.TextBox();
-			this.groupBox1.SuspendLayout();
-			this.SuspendLayout();
-			// 
-			// butSend
-			// 
-			this.butSend.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
-			this.butSend.BackColor = System.Drawing.SystemColors.Control;
-			this.butSend.FlatStyle = System.Windows.Forms.FlatStyle.System;
-			this.butSend.Location = new System.Drawing.Point(168, 336);
-			this.butSend.Name = "butSend";
-			this.butSend.Size = new System.Drawing.Size(120, 32);
-			this.butSend.TabIndex = 5;
-			this.butSend.Text = "Send Feedback";
-			this.butSend.Click += new System.EventHandler(this.butSend_Click);
-			// 
-			// label1
-			// 
-			this.label1.Location = new System.Drawing.Point(8, 8);
-			this.label1.Name = "label1";
-			this.label1.Size = new System.Drawing.Size(264, 40);
-			this.label1.TabIndex = 4;
-			this.label1.Text = "Type a Message to send as Feedback to the Plugin Host Application, then click the" +
-				" button to send!";
-			// 
-			// groupBox1
-			// 
-			this.groupBox1.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
-				| System.Windows.Forms.AnchorStyles.Left) 
-				| System.Windows.Forms.AnchorStyles.Right)));
-			this.groupBox1.Controls.Add(this.txtFeedback);
-			this.groupBox1.FlatStyle = System.Windows.Forms.FlatStyle.System;
-			this.groupBox1.Location = new System.Drawing.Point(8, 48);
-			this.groupBox1.Name = "groupBox1";
-			this.groupBox1.Size = new System.Drawing.Size(464, 280);
-			this.groupBox1.TabIndex = 3;
-			this.groupBox1.TabStop = false;
-			this.groupBox1.Text = "Host Feedback:";
-			// 
-			// txtFeedback
-			// 
-			this.txtFeedback.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
-				| System.Windows.Forms.AnchorStyles.Left) 
-				| System.Windows.Forms.AnchorStyles.Right)));
-			this.txtFeedback.Location = new System.Drawing.Point(8, 16);
-			this.txtFeedback.Multiline = true;
-			this.txtFeedback.Name = "txtFeedback";
-			this.txtFeedback.Size = new System.Drawing.Size(448, 256);
-			this.txtFeedback.TabIndex = 0;
-			this.txtFeedback.Text = "";
-			// 
-			// Plugin4
-			// 
-			this.BackColor = System.Drawing.Color.White;
-			this.Controls.Add(this.butSend);
-			this.Controls.Add(this.label1);
-			this.Controls.Add(this.groupBox1);
-			this.Name = "Plugin4";
-			this.Size = new System.Drawing.Size(488, 392);
-			this.Load += new System.EventHandler(this.ctlMain_Load);
-			this.groupBox1.ResumeLayout(false);
-			this.ResumeLayout(false);
+            this.label1 = new System.Windows.Forms.Label();
+            this.button1 = new System.Windows.Forms.Button();
+            this.textBox1 = new System.Windows.Forms.TextBox();
+            this.label2 = new System.Windows.Forms.Label();
+            this.textBox2 = new System.Windows.Forms.TextBox();
+            this.linkLabel1 = new System.Windows.Forms.LinkLabel();
+            this.SuspendLayout();
+            // 
+            // label1
+            // 
+            this.label1.AutoSize = true;
+            this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label1.Location = new System.Drawing.Point(3, 65);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(69, 20);
+            this.label1.TabIndex = 0;
+            this.label1.Text = "Name :";
+            this.label1.Click += new System.EventHandler(this.label1_Click);
+            // 
+            // button1
+            // 
+            this.button1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(192)))), ((int)(((byte)(192)))));
+            this.button1.Location = new System.Drawing.Point(243, 191);
+            this.button1.Name = "button1";
+            this.button1.Size = new System.Drawing.Size(105, 57);
+            this.button1.TabIndex = 1;
+            this.button1.Text = "ทักทาย";
+            this.button1.UseVisualStyleBackColor = false;
+            this.button1.Click += new System.EventHandler(this.button1_Click);
+            // 
+            // textBox1
+            // 
+            this.textBox1.Location = new System.Drawing.Point(78, 65);
+            this.textBox1.Name = "textBox1";
+            this.textBox1.Size = new System.Drawing.Size(270, 22);
+            this.textBox1.TabIndex = 2;
+            // 
+            // label2
+            // 
+            this.label2.AutoSize = true;
+            this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label2.Location = new System.Drawing.Point(3, 120);
+            this.label2.Name = "label2";
+            this.label2.Size = new System.Drawing.Size(134, 20);
+            this.label2.TabIndex = 3;
+            this.label2.Text = "Student Code :";
+            // 
+            // textBox2
+            // 
+            this.textBox2.Location = new System.Drawing.Point(143, 120);
+            this.textBox2.Name = "textBox2";
+            this.textBox2.Size = new System.Drawing.Size(205, 22);
+            this.textBox2.TabIndex = 4;
+            // 
+            // linkLabel1
+            // 
+            this.linkLabel1.AutoSize = true;
+            this.linkLabel1.Location = new System.Drawing.Point(4, 282);
+            this.linkLabel1.Name = "linkLabel1";
+            this.linkLabel1.Size = new System.Drawing.Size(257, 17);
+            this.linkLabel1.TabIndex = 5;
+            this.linkLabel1.TabStop = true;
+            this.linkLabel1.Text = "https://github.com/SupawadeeSalamteh";
+            // 
+            // ctlMain
+            // 
+            this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(224)))), ((int)(((byte)(192)))));
+            this.Controls.Add(this.linkLabel1);
+            this.Controls.Add(this.textBox2);
+            this.Controls.Add(this.label2);
+            this.Controls.Add(this.textBox1);
+            this.Controls.Add(this.button1);
+            this.Controls.Add(this.label1);
+            this.Name = "ctlMain";
+            this.Size = new System.Drawing.Size(407, 311);
+            this.ResumeLayout(false);
+            this.PerformLayout();
 
 		}
 		#endregion
-
-		private void ctlMain_Load(object sender, System.EventArgs e)
-		{
-		
-		}
-		#region IPlugin Members
-		
-		IPluginHost myPluginHost = null;
-		string myPluginName = "Plugin4";   // change to your plugin name
-		string myPluginAuthor = "Jonathan Dick"; // change to plugin's author name
-		string myPluginDescription = "This Combines the User Control and Plugin Class into one Class";
-		string myPluginVersion = "1.0.0";
-		
-        
-		void PluginInterface.IPlugin.Dispose()
-		{
-			// TODO:  Add ctlMain.PluginInterface.IPlugin.Dispose implementation
-		}
-
-		public string Description
-		{
-			get
-			{
-				// TODO:  Add ctlMain.Description getter implementation
-				return myPluginDescription;
-			}
+		int newH = 0;
+		int newV = 0;
+			
+		Random rndH = new Random(20);
+        private Label label1;
+        private Button button1;
+        private TextBox textBox1;
+        private Label label2;
+        private TextBox textBox2;
+        private LinkLabel linkLabel1;
+        Random rndV = new Random(20);
+        private void button1_Click(object sender, EventArgs e)
+        {
+			MessageBox.Show("Hello", "แจ้งตือน", MessageBoxButtons.OK);
+            textBox1.Text = "Supawadee Salamted";
+            textBox2.Text = "63030094";
 		}
 
-		public string Author
-		{
-			get
-			{
-				// TODO:  Add ctlMain.Author getter implementation
-				return myPluginAuthor;
-			}
-		}
-
-		public IPluginHost Host
-		{
-			get
-			{
-				// TODO:  Add ctlMain.Host getter implementation
-				return myPluginHost;
-			}
-			set
-			{
-				myPluginHost = value;
-			}
-		}
-
-		public void Initialize()
-		{
-			// TODO:  Add ctlMain.Initialize implementation
-		}
-
-		private void butSend_Click(object sender, System.EventArgs e)
-		{
-			this.Host.Feedback(this.txtFeedback.Text, this);
-		}
-
-			/*
-		public string Name
-		{
-			get
-			{
-				// TODO:  Add ctlMain.Name getter implementation
-				return myPluginName;
-			}
-		}
-		*/
-		public UserControl MainInterface
-		{
-			get
-			{
-				// TODO:  Add ctlMain.MainInterface getter implementation
-				return this;
-			}
-		}
-
-		public string Version
-		{
-			get
-			{
-				// TODO:  Add ctlMain.Version getter implementation
-				return myPluginVersion;
-			}
-		}
-
-		#endregion
-	}
+        private void label1_Click(object sender, EventArgs e)
+        {
+                
+        }
+    }
 }
